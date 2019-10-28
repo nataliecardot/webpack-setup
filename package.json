@@ -1,0 +1,19 @@
+{
+  "name": "webpack-setup",
+  "version": "1.0.0",
+  "description": "Starter project with Webpack 4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nataliecardot/webpack-setup.git"
+  },
+  "author": "Natalie Cardot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nataliecardot/webpack-setup/issues"
+  },
+  "homepage": "https://github.com/nataliecardot/webpack-setup#readme"
+}
