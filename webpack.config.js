@@ -1,5 +1,6 @@
 // Among other things, html-webpack-plugin generates index.html using the version in src, but adds a script link to output main.js file, and html-loader (with the minimize option set to true) minimizes the HTML
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   module: {
@@ -26,6 +27,14 @@ module.exports = {
           'file-loader'
         ]
       },
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
+      }
     ]
   },
   plugins: [
@@ -33,5 +42,11 @@ module.exports = {
       template: './src/index.html',
       filename: './index.html'
     }),
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: '[name].css',
+      chunkFilename: '[id].css'
+    })
   ]
 }
